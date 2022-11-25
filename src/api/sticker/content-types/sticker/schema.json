@@ -4,15 +4,30 @@
   "info": {
     "singularName": "sticker",
     "pluralName": "stickers",
-    "displayName": "Sticker"
+    "displayName": "Sticker",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "stickers"
     }
   }
 }

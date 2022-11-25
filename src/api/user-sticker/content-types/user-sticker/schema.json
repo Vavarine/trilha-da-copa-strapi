@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_stickers",
+  "info": {
+    "singularName": "user-sticker",
+    "pluralName": "user-stickers",
+    "displayName": "UserSticker",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sticker": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sticker.sticker"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}
